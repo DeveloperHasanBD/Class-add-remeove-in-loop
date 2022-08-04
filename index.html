@@ -1,0 +1,21 @@
+<script>
+        const all_lists = document.querySelectorAll('.list_section li');
+        all_lists.forEach(function (item) {
+            item.addEventListener('click', function () {
+                const current_target = document.querySelector('.list_section li.show-hide');
+                if (current_target != null) {
+                    current_target.classList.remove('show-hide');
+                }
+                this.classList.add('show-hide');
+            })
+        });
+    </script>
+
+    <div class="list_section">
+        <li>Number #1</li>
+        <li>Number #2</li>
+        <li>Number #3</li>
+        <li>Number #4</li>
+        <li>Number #5</li>
+        <li>Number #6</li>
+    </div>
